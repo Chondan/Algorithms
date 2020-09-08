@@ -8,7 +8,6 @@ int main(void) {
     selectionSort(x, 5);
     printf("Sorted array: ");
     loopThrougArray(x, 5);
-    
 }
 void selectionSort(int *arr, int size) {
     for (int i = 0; i < size; i++) {
