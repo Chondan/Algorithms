@@ -100,6 +100,11 @@ For example:
 	- disjoint sets
 		- two sets are said to be disjoint sets if they have no element in common.
 2. Detecting a cycle
+	- algorithms:
+		1. Create a disjoint sets for each vertex of the graph.
+		2. For every edge u, v in the graph.
+			- Find root of the sets to which elements u and v belongs
+			- If both u and v have same root in disjoint sets, a cycle is found.
 3. Graphical Representation
 4. Array Representation
 5. Weighted Union & Collapsing Find
