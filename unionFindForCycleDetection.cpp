@@ -1,7 +1,13 @@
 #include <iostream> 
 #include <unordered_map>
-#include <vector> // Vectors are same as dynamic arrays with the ability to resize itself automatically.
+#include <vector> 
 using namespace std;
+
+// vector vs list
+// - vectors are same as dynamic arrays with the ability to resize itself automatically.
+// - lists are sequence containers that allow non-contiguous memory allocation.
+// As compared to vector, list has slow traversal, but once a position has been found, 
+// insertion and deletion are quick.
 
 // data structure to store graph edges
 struct Edge {
@@ -22,7 +28,8 @@ public:
 		adjList.resize(N + 1);
 
 		// add edges to the graph
-		for (auto &edge: edges) {
+		for (auto &edge: edges) { 
+			// The 'auto' keyword is simple asking the compiler to deduce the type of the variable from initialization.
 			adjList[edge.src].push_back(edge.dest);
 		}
 	}
@@ -87,7 +94,6 @@ bool findCycle(Graph const &graph, int N) {
 //   i) Find root of the sets to which elements u and v belongs
 //  ii) If both u and v have same root is disjoint sets, a cycle is found.
 
-
 int main(void) {
 
 	// vector of graph edges as per above diagram
@@ -107,4 +113,3 @@ int main(void) {
 	else cout << "No Cycle Found" << endl;
 
 }
-
